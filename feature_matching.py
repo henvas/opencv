@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-img1 = cv2.imread("images/reach_eagle.jpg", cv2.IMREAD_GRAYSCALE)
-img2 = cv2.imread("images/me_reach_eagle.jpg", cv2.IMREAD_GRAYSCALE)
+img1 = cv2.imread("images/kariusbaktus.jpg", cv2.IMREAD_GRAYSCALE)
+img2 = cv2.imread("images/me_karius.jpg", cv2.IMREAD_GRAYSCALE)
 
 
 
@@ -16,7 +16,7 @@ bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
 matches = bf.match(descriptors1, descriptors2)
 
 matches = sorted(matches, key=lambda x:x.distance)
-matching_results = cv2.drawMatches(img1, keypoints1, img2, keypoints2, matches[:10], None, flags=2)
+matching_results = cv2.drawMatches(img1, keypoints1, img2, keypoints2, matches[:50], None, flags=2)
 cv2.imshow("Matching results", matching_results)
 
 '''
