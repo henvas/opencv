@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img1 = cv2.imread("images/kariusbaktus.jpg", cv2.IMREAD_GRAYSCALE)
+img1 = cv2.imread("images/kariusbaktus_v2.png", cv2.IMREAD_GRAYSCALE)
 img2 = cv2.imread("images/me_karius.jpg", cv2.IMREAD_GRAYSCALE)
 
 
