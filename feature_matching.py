@@ -16,7 +16,7 @@ bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
 matches = bf.match(descriptors1, descriptors2)
 
 matches = sorted(matches, key=lambda x:x.distance)
-matching_results = cv2.drawMatches(img1, keypoints1, img2, keypoints2, matches[:50], None, flags=2)
+matching_results = cv2.drawMatches(img1, keypoints1, img2, keypoints2, matches[:30], None, flags=2)
 cv2.imshow("Matching results", matching_results)
 
 '''
